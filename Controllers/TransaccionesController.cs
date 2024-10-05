@@ -65,7 +65,7 @@ namespace PARCIAL_CASTRO.Controllers
                     try
                     {
                         var tasaBtc = await _conversionService.GetBtcToUsdRateAsync();
-                        // Establecer la tasa de cambio como el precio del dólar actual
+                        
                         transacciones.TasaCam = 1 / tasaBtc; // Esto convierte la tasa de BTC a USD a USD a BTC
                         transacciones.MontoFin = transacciones.MontoEnv * tasaBtc; // Calculamos el monto final en BTC
                     }
