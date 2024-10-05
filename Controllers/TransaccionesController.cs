@@ -43,7 +43,9 @@ namespace PARCIAL_CASTRO.Controllers
                 // Calcular MontoFin antes de guardar
                 transacciones.MontoFin = transacciones.MontoEnv * transacciones.TasaCam;
 
-                
+                // Agregar la transacción al contexto
+                _context.Add(transacciones);
+                await _context.SaveChangesAsync();
 
                 // Redirigir al listado después de guardar
                 return RedirectToAction(nameof(Index));
