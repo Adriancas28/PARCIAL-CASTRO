@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PARCIAL-CASTRO")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c6db8072172b3c02f67e38e01b2a431f286abb5d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c0971a1a89a34fcbb214314056928a3cbda9d8e4")]
 [assembly: System.Reflection.AssemblyProductAttribute("PARCIAL-CASTRO")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PARCIAL-CASTRO")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

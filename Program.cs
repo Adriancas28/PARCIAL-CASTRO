@@ -16,6 +16,9 @@ builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.Requ
     .AddEntityFrameworkStores<ApplicationDbContext>();
 builder.Services.AddControllersWithViews();
 
+builder.Services.AddHttpClient<PARCIAL_CASTRO.Services.ConversionService>();
+
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
