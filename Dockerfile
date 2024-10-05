@@ -1,17 +1,19 @@
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
 WORKDIR /app
+EXPOSE 80
 
-COPY *.csproj ./
-RUN dotnet restore
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+WORKDIR /src
+COPY ["PARCIAL_CASTRO.csproj", "./"]
+RUN dotnet restore "./PARCIAL_CASTRO.csproj"
+COPY . .
+WORKDIR "/src/."
+RUN dotnet build "PARCIAL_CASTRO.csproj" -c Release -o /app/build
 
-COPY . ./
-RUN dotnet publish -c Release -o out
+FROM build AS publish
+RUN dotnet publish "PARCIAL_CASTRO.csproj" -c Release -o /app/publish
 
-FROM mcr.microsoft.com/dotnet/aspnet:8.0
+FROM base AS final
 WORKDIR /app
-COPY --from=build-env /app/out .
-
-#CAMBIAR AQUI EL NOMBRE DEL APLICATIVO
-#nombre de tu app busca en bin\Release**\netcore5.0\plantitas.exe
-ENV APP_NET_CORE PARCIAL_CASTRO.dll 
-
-CMD ASPNETCORE_URLS=http://*:$PORT dotnet $APP_NET_CORE
+COPY --from=publish /app/publish .
+ENTRYPOINT ["dotnet", "PARCIAL_CASTRO.dll"]
