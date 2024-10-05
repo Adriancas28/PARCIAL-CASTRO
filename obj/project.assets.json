@@ -2752,11 +2752,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\USUARIO\\OneDrive\\Escritorio\\PARCIAL-CASTRO\\PARCIAL-CASTRO.csproj",
+      "projectUniqueName": "C:\\Users\\USUARIO\\PARCIAL-CASTRO\\PARCIAL-CASTRO.csproj",
       "projectName": "PARCIAL-CASTRO",
-      "projectPath": "C:\\Users\\USUARIO\\OneDrive\\Escritorio\\PARCIAL-CASTRO\\PARCIAL-CASTRO.csproj",
+      "projectPath": "C:\\Users\\USUARIO\\PARCIAL-CASTRO\\PARCIAL-CASTRO.csproj",
       "packagesPath": "C:\\Users\\USUARIO\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\USUARIO\\OneDrive\\Escritorio\\PARCIAL-CASTRO\\obj\\",
+      "outputPath": "C:\\Users\\USUARIO\\PARCIAL-CASTRO\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\USUARIO\\AppData\\Roaming\\NuGet\\NuGet.Config"
